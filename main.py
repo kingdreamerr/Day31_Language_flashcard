@@ -1,5 +1,21 @@
 from tkinter import *
+from random import choice
 BACKGROUND_COLOR = "#B1DDC6"
+
+
+
+# ------------------------------FUNCTIONS--------------------------------------#
+
+
+def next_card():
+    global current_card, flip_timer
+    window.after_cancel(flip_timer)
+    current_card = choice(words)
+    canvas.itemconfig(card_image, image=front_card)
+    canvas.itemconfig(card_title, text='French', fill="black")
+    canvas.itemconfig(word_name, text=current_card['French'], fill="black")
+    flip_timer = window.after(3000, func=flip_card)
+
 # ------------------------------UI SETUP---------------------------------------#
 
 window = Tk()
