@@ -1,16 +1,12 @@
 # Day31
 
 ## Capstone
-
-### Preview:
-![flashcard1](./found_password.png)
-![flashcard2](./not_found.png)
-
-
-
 ### Language_flashcard
 
 > Built using tkinter this program helps you learn some of the top 100 French words
+### Preview:
+![flashcard1](./fren.png)
+![flashcard2](./eng.png)
 
 
 ## How to run this on your device
