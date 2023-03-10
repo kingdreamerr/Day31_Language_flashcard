@@ -32,6 +32,11 @@ def flip_card():
     canvas.itemconfig(card_title, text='English', fill="white")
     canvas.itemconfig(word_name, text=current_card['English'], fill="white")
 
+def correct():
+    words.remove(current_card)
+    data1 = pandas.DataFrame(words)
+    data1.to_csv('./data/words_to_learn.csv',index=False)
+    next_card()
 # ------------------------------UI SETUP---------------------------------------#
 
 window = Tk()
