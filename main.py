@@ -17,3 +17,9 @@ canvas.grid(column=0, row=0, columnspan=2)
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
 card_title = canvas.create_text(400, 150, text="", fill='black', font=("Ariel", 40, 'italic'))
 word_name = canvas.create_text(400, 263, text="", fill="black", font=("Ariel", 60, 'bold'))
+
+# correct button
+correct_image = PhotoImage(file='./images/right.png')
+correct_button = Button(image=correct_image, highlightthickness=0, command=correct)
+correct_button.grid(column=0, row=1)
+window.mainloop()
