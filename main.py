@@ -1,9 +1,20 @@
 from tkinter import *
 from random import choice
+import pandas
 BACKGROUND_COLOR = "#B1DDC6"
 
 
 
+# -----------------------------DATA-------------------------------------------#
+try:
+    data = pandas.read_csv('./data/words_to_learn.csv')
+except FileNotFoundError:
+    data = pandas.read_csv('./data/french_words.csv')
+except pandas.errors.EmptyDataError:
+    data = pandas.read_csv('./data/french_words.csv')
+
+words = data.to_dict(orient="records")
+current_card = {}
 # ------------------------------FUNCTIONS--------------------------------------#
 
 
