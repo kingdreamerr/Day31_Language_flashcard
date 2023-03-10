@@ -65,4 +65,6 @@ correct_button.grid(column=0, row=1)
 wrong_image = PhotoImage(file='./images/wrong.png')
 wrong_button = Button(image=wrong_image, highlightthickness=0, command=next_card)
 wrong_button.grid(column=1, row=1)
+
+next_card()
 window.mainloop()
