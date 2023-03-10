@@ -27,6 +27,11 @@ def next_card():
     canvas.itemconfig(word_name, text=current_card['French'], fill="black")
     flip_timer = window.after(3000, func=flip_card)
 
+def flip_card():
+    canvas.itemconfig(card_image, image=back_card)
+    canvas.itemconfig(card_title, text='English', fill="white")
+    canvas.itemconfig(word_name, text=current_card['English'], fill="white")
+
 # ------------------------------UI SETUP---------------------------------------#
 
 window = Tk()
